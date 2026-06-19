@@ -1,0 +1,118 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.section {
+  padding: 96px $section-padding-x;
+}
+
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.label {
+  @include section-label;
+}
+
+.title {
+  @include section-heading;
+  font-size: clamp(28px, 3.6vw, 50px);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  position: relative;
+
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to(tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.connector {
+  position: absolute;
+  top: 26px;
+  left: calc(12.5% + 28px);
+  right: calc(12.5% + 28px);
+  height: 2px;
+  background: linear-gradient(90deg, $color-primary, $color-primary-dark);
+  opacity: 0.2;
+
+  @include respond-to(desktop) {
+    display: none;
+  }
+}
+
+.step {
+  text-align: center;
+  position: relative;
+}
+
+.stepNumber {
+  width: 54px;
+  height: 54px;
+  @include gradient-primary;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-family: $font-serif;
+  font-size: 22px;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(232, 113, 26, 0.35);
+}
+
+.stepNumberFinal {
+  @include gradient-accent;
+  box-shadow: 0 6px 20px rgba(244, 160, 24, 0.42);
+}
+
+.stepTitle {
+  font-family: $font-serif;
+  font-size: 20px;
+  color: $color-text;
+  margin: 0 0 10px;
+  font-weight: 400;
+}
+
+.stepText {
+  font-size: 13.5px;
+  color: $color-text-light;
+  line-height: 1.68;
+  margin: 0;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  @include gradient-primary;
+  color: #fff;
+  padding: 15px 36px;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 6px 24px rgba(192, 50, 28, 0.35);
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(192, 50, 28, 0.5);
+    transform: translateY(-2px);
+  }
+}

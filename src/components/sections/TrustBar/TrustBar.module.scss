@@ -1,0 +1,48 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.trustBar {
+  background: $color-bg-dark;
+}
+
+.container {
+  @include container;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.item {
+  flex: 1;
+  min-width: 220px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.withBorder {
+  border-right: 1px solid rgba(255, 255, 255, 0.09);
+
+  @include respond-to(tablet) {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  }
+}
+
+.iconBox {
+  @include icon-box;
+}
+
+.title {
+  font-family: $font-serif;
+  font-size: 19px;
+  color: $color-text-cream;
+}
+
+.description {
+  font-size: 12px;
+  color: #a08070;
+  margin-top: 2px;
+}

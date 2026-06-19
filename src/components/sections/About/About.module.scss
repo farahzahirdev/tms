@@ -1,0 +1,100 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.section {
+  padding: 108px $section-padding-x;
+}
+
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  display: flex;
+  gap: 84px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.imageColumn {
+  flex: 0 0 380px;
+  min-width: 0;
+
+  @include respond-to(desktop) {
+    flex: 1;
+  }
+}
+
+.imageWrapper {
+  border-radius: $radius-2xl;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: #e8d8c8;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.label {
+  @include section-label;
+}
+
+.title {
+  @include section-heading;
+  font-size: clamp(28px, 3.8vw, 50px);
+  line-height: 1.08;
+  margin-bottom: 8px;
+}
+
+.role {
+  font-size: 15px;
+  color: $color-primary;
+  font-weight: 600;
+  margin-bottom: 26px;
+  letter-spacing: 0.01em;
+}
+
+.quote {
+  font-family: $font-serif;
+  font-size: 22px;
+  color: #3a2010;
+  line-height: 1.45;
+  margin: 0 0 22px;
+  font-style: italic;
+}
+
+.text {
+  font-size: 15px;
+  color: $color-text-muted;
+  line-height: 1.78;
+  margin: 0 0 32px;
+}
+
+.credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.credential {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: $color-text-muted;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: $color-primary;
+  border-radius: 50%;
+  flex-shrink: 0;
+}

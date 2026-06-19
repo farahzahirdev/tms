@@ -1,0 +1,57 @@
+// Colors
+$color-bg: #fffcf8;
+$color-bg-warm: #fff8f0;
+$color-bg-cream: #f5ede2;
+$color-bg-dark: #231a15;
+$color-bg-darker: #0e0806;
+$color-bg-contact: linear-gradient(140deg, #2a1510 0%, #190a05 100%);
+
+$color-text: #231a15;
+$color-text-warm: #4a3020;
+$color-text-muted: #5a4035;
+$color-text-light: #7a5a48;
+$color-text-cream: #fff8f0;
+$color-text-placeholder: #b8a898;
+
+$color-primary: #e8711a;
+$color-primary-dark: #c0321c;
+$color-accent: #f4a018;
+$color-accent-deep: #8b1616;
+
+$color-border: #ede5d8;
+$color-border-input: #e0d5c8;
+$color-border-card: #f0e6da;
+
+$color-input-bg: #fdfaf7;
+$color-highlight-bg: #fff0e4;
+$color-highlight-bg-soft: #fff3e8;
+
+// Typography
+$font-serif: var(--font-dm-serif), "DM Serif Display", Georgia, serif;
+$font-sans: var(--font-plus-jakarta), "Plus Jakarta Sans", sans-serif;
+
+// Layout
+$container-max: 1200px;
+$header-height: 76px;
+$section-padding-x: 40px;
+
+// Breakpoints
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+
+// Shadows
+$shadow-sm: 0 2px 14px rgba(0, 0, 0, 0.055);
+$shadow-md: 0 12px 36px rgba(0, 0, 0, 0.13);
+$shadow-lg: 0 20px 64px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.12);
+$shadow-primary: 0 6px 24px rgba(232, 113, 26, 0.35);
+
+// Transitions
+$transition-fast: 0.15s ease;
+
+// Border radius
+$radius-sm: 7px;
+$radius-md: 8px;
+$radius-lg: 14px;
+$radius-xl: 18px;
+$radius-2xl: 20px;
+$radius-pill: 100px;

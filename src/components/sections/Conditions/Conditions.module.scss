@@ -1,0 +1,50 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.section {
+  background: $color-bg-cream;
+  padding: 80px $section-padding-x;
+}
+
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.label {
+  @include section-label;
+}
+
+.title {
+  @include section-heading;
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: $color-text-light;
+  max-width: 500px;
+  margin: 0 auto 48px;
+  line-height: 1.72;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.tag {
+  background: #fff;
+  border: 1.5px solid #e0cebe;
+  color: $color-text;
+  padding: 11px 22px;
+  border-radius: $radius-pill;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}

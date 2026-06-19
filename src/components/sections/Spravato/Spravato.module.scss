@@ -1,0 +1,116 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.section {
+  background: $color-bg-dark;
+  padding: 72px $section-padding-x;
+}
+
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  color: $color-accent;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.title {
+  font-family: $font-serif;
+  font-size: clamp(24px, 3vw, 42px);
+  color: $color-text-cream;
+  line-height: 1.15;
+  margin: 0 0 18px;
+  font-weight: 400;
+
+  sup {
+    font-size: 0.55em;
+  }
+
+  em {
+    color: $color-accent;
+    font-style: normal;
+  }
+}
+
+.text {
+  font-size: 15px;
+  color: rgba(255, 248, 240, 0.68);
+  line-height: 1.78;
+  margin: 0 0 28px;
+  max-width: 520px;
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 9px 16px;
+  border-radius: $radius-sm;
+  color: $color-text-cream;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.ctaColumn {
+  flex: 0 0 300px;
+}
+
+.ctaCard {
+  display: block;
+  @include gradient-primary;
+  color: #fff;
+  padding: 28px 32px;
+  border-radius: $radius-lg;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(232, 113, 26, 0.38);
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 38px rgba(232, 113, 26, 0.5);
+  }
+}
+
+.ctaTitle {
+  font-family: $font-serif;
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+.ctaSubtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 18px;
+}
+
+.ctaButton {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 20px;
+  border-radius: $radius-sm;
+}

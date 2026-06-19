@@ -1,0 +1,50 @@
+@use "../styles/variables" as *;
+@use "../styles/animations";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-sans;
+  color: $color-text;
+  background: $color-bg;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::placeholder {
+  color: $color-text-placeholder;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: $color-primary !important;
+  box-shadow: 0 0 0 3px rgba(232, 113, 26, 0.12) !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

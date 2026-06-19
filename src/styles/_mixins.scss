@@ -1,0 +1,106 @@
+@use "variables" as *;
+
+@mixin container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding-left: $section-padding-x;
+  padding-right: $section-padding-x;
+}
+
+@mixin section-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: $color-primary;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+@mixin section-heading {
+  font-family: $font-serif;
+  color: $color-text;
+  line-height: 1.1;
+  margin: 0;
+  font-weight: 400;
+}
+
+@mixin gradient-primary {
+  background: linear-gradient(135deg, $color-primary, $color-primary-dark);
+}
+
+@mixin gradient-accent {
+  background: linear-gradient(135deg, $color-accent, $color-primary);
+}
+
+@mixin hover-lift {
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+@mixin focus-input {
+  &:focus {
+    outline: none;
+    border-color: $color-primary !important;
+    box-shadow: 0 0 0 3px rgba(232, 113, 26, 0.12) !important;
+  }
+}
+
+@mixin form-input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid $color-border-input;
+  border-radius: $radius-sm;
+  font-size: 14px;
+  color: $color-text;
+  background: $color-input-bg;
+  transition: border-color $transition-fast, box-shadow $transition-fast;
+
+  @include focus-input;
+}
+
+@mixin form-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #5a3a25;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@mixin icon-box($size: 44px) {
+  width: $size;
+  height: $size;
+  background: rgba(244, 160, 24, 0.15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@mixin check-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 14px;
+  border-radius: $radius-sm;
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (max-width: $bp-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (max-width: $bp-desktop) {
+      @content;
+    }
+  }
+}

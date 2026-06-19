@@ -1,0 +1,92 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.section {
+  padding: 96px $section-padding-x;
+}
+
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.label {
+  @include section-label;
+}
+
+.title {
+  @include section-heading;
+  font-size: clamp(26px, 3.5vw, 44px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  @include respond-to(desktop) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.055);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1.5px solid $color-border-card;
+}
+
+.stars {
+  display: flex;
+  gap: 3px;
+}
+
+.quote {
+  font-size: 15px;
+  color: $color-text-warm;
+  line-height: 1.78;
+  margin: 0;
+  flex: 1;
+  font-style: italic;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  @include gradient-primary;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-serif;
+  font-size: 16px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  color: $color-text;
+}
+
+.detail {
+  font-size: 12px;
+  color: #9a7a68;
+  margin-top: 2px;
+}

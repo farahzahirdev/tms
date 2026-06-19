@@ -1,0 +1,131 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.section {
+  background: $color-bg-contact;
+  padding: 96px $section-padding-x;
+}
+
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  color: $color-accent;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.title {
+  font-family: $font-serif;
+  font-size: clamp(28px, 3.8vw, 52px);
+  color: $color-text-cream;
+  line-height: 1.08;
+  margin: 0 0 20px;
+  font-weight: 400;
+}
+
+.text {
+  font-size: 16px;
+  color: rgba(255, 248, 240, 0.66);
+  line-height: 1.78;
+  margin: 0 0 52px;
+  max-width: 400px;
+}
+
+.contactItems {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.contactItem,
+.contactItemStatic {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contactItemStatic {
+  align-items: flex-start;
+}
+
+.iconBox {
+  width: 50px;
+  height: 50px;
+  background: rgba(244, 160, 24, 0.14);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactItemStatic .iconBox {
+  margin-top: 2px;
+}
+
+.itemLabel {
+  font-size: 12px;
+  color: rgba(255, 248, 240, 0.45);
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.phone {
+  font-size: 22px;
+  font-weight: 700;
+  color: $color-accent;
+  letter-spacing: 0.01em;
+}
+
+.email {
+  font-size: 16px;
+  font-weight: 600;
+  color: $color-text-cream;
+}
+
+.address {
+  font-size: 15px;
+  color: $color-text-cream;
+  line-height: 1.62;
+}
+
+.hours {
+  font-size: 13px;
+  color: rgba(255, 248, 240, 0.42);
+  margin-top: 7px;
+}
+
+.formColumn {
+  flex: 0 0 480px;
+  min-width: 0;
+
+  @include respond-to(desktop) {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+.formCard {
+  background: #fff;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0 24px 68px rgba(0, 0, 0, 0.38);
+  overflow: hidden;
+}

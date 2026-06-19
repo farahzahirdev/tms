@@ -1,0 +1,197 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+@use "../../../styles/animations" as *;
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - #{$header-height});
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  background: url("/images/hero-bg.jpg") center / cover no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    rgba(118, 20, 20, 0.93) 0%,
+    rgba(175, 60, 18, 0.82) 42%,
+    rgba(10, 6, 3, 0.55) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px $section-padding-x;
+  display: flex;
+  gap: 72px;
+  align-items: stretch;
+
+  @include respond-to(desktop) {
+    flex-direction: column;
+    gap: 48px;
+    align-items: flex-start;
+  }
+}
+
+.left {
+  flex: 1;
+  min-width: 0;
+  @include fade-up;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 7px 16px;
+  border-radius: $radius-pill;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  background: $color-accent;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.title {
+  font-family: $font-serif;
+  font-size: clamp(40px, 5.5vw, 72px);
+  color: $color-text-cream;
+  line-height: 1.04;
+  margin: 0 0 22px;
+  font-weight: 400;
+  text-wrap: balance;
+
+  em {
+    color: $color-accent;
+    font-style: italic;
+  }
+}
+
+.lead {
+  font-size: clamp(16px, 1.6vw, 20px);
+  color: rgba(255, 248, 240, 0.83);
+  line-height: 1.68;
+  margin: 0 0 14px;
+  max-width: 520px;
+  font-weight: 300;
+
+  strong {
+    color: $color-text-cream;
+    font-weight: 600;
+  }
+}
+
+.sublead {
+  font-size: 14px;
+  color: rgba(255, 248, 240, 0.56);
+  margin: 0 0 36px;
+  max-width: 460px;
+  line-height: 1.65;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.feature {
+  @include check-badge;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.primaryAction {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: $color-accent;
+  color: #1a0800;
+  padding: 15px 30px;
+  border-radius: $radius-md;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 6px 24px rgba(244, 160, 24, 0.55);
+  transition: transform $transition-fast, box-shadow $transition-fast, background $transition-fast;
+
+  &:hover {
+    background: #ffb52a;
+    transform: translateY(-2px);
+  }
+}
+
+.secondaryAction {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: transparent;
+  color: $color-text-cream;
+  padding: 15px 28px;
+  border-radius: $radius-md;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid rgba(255, 248, 240, 0.4);
+  transition: background $transition-fast, border-color $transition-fast;
+
+  &:hover {
+    background: rgba(255, 248, 240, 0.1);
+    border-color: rgba(255, 248, 240, 0.75);
+  }
+}
+
+.formWrapper {
+  flex: 1 1 400px;
+  max-width: 600px;
+  min-width: 400px;
+  display: flex;
+  @include fade-up(0.16s);
+
+  @include respond-to(desktop) {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+.formCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: $shadow-lg;
+  overflow: hidden;
+  min-height: 100%;
+}

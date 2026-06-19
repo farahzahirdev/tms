@@ -1,0 +1,74 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.section {
+  background: $color-bg-warm;
+  padding: 96px $section-padding-x;
+}
+
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.label {
+  @include section-label;
+}
+
+.title {
+  @include section-heading;
+  font-size: clamp(28px, 3.6vw, 50px);
+  margin-bottom: 18px;
+}
+
+.subtitle {
+  font-size: 17px;
+  color: $color-text-light;
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.72;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: $radius-lg;
+  padding: 30px 26px;
+  box-shadow: $shadow-sm;
+}
+
+.iconBox {
+  width: 50px;
+  height: 50px;
+  background: $color-highlight-bg;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.cardTitle {
+  font-family: $font-serif;
+  font-size: 21px;
+  color: $color-text;
+  margin: 0 0 10px;
+  font-weight: 400;
+}
+
+.cardText {
+  font-size: 13.5px;
+  color: $color-text-light;
+  line-height: 1.68;
+  margin: 0;
+}
