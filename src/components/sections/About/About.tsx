@@ -9,10 +9,10 @@ export default function About() {
         <div className={styles.imageColumn}>
           <div className={styles.imageWrapper}>
             <Image
-              src="/images/dr-parmar.jpg"
+              src="/images/priya.png"
               alt="Dr. Priya Parmar, MD"
-              width={380}
-              height={507}
+              width={896}
+              height={1195}
               className={styles.image}
             />
           </div>
