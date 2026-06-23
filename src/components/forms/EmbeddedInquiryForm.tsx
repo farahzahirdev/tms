@@ -6,8 +6,11 @@ import styles from "./EmbeddedInquiryForm.module.scss";
 export default function EmbeddedInquiryForm() {
   const iframeId = `inline-${INQUIRY_FORM.id}`;
 
+
+  console.log(INQUIRY_FORM.height, 'height');
+  
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrappe}>
       <iframe
         src={INQUIRY_FORM.src}
         className={styles.iframe}

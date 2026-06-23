@@ -26,7 +26,7 @@ export default function HowItWorks() {
         </div>
 
         <div className={styles.cta}>
-          <Link href="#contact" className={styles.ctaButton}>
+          <Link href="#inquiry-form" className={styles.ctaButton}>
             Start Your Journey Today
             <ArrowRightIcon size={16} />
           </Link>

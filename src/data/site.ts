@@ -28,9 +28,9 @@ export const NAV_LINKS = [
 ] as const;
 
 export const HERO_BADGES = [
-  "No medication side effects",
+  "Covered by insurance",
   "FDA-cleared since 2008",
-  "20–40 min sessions",
+  "20-minute sessions",
   "Resume daily activities immediately",
 ] as const;
 
@@ -41,30 +41,30 @@ export const TRUST_ITEMS = [
     icon: "shield" as const,
   },
   {
-    title: "~70% Respond",
-    description: "Of treatment-resistant patients",
+    title: "70% Find Relief",
+    description: "After Medication Falls Short",
     icon: "heart" as const,
   },
   {
-    title: "20–40 Min",
-    description: "Per session, drive yourself home",
+    title: "20-Minute Sessions",
+    description: "Back to your day",
     icon: "clock" as const,
   },
   {
-    title: "Board-Certified",
-    description: "Psychiatrists overseeing your care",
-    icon: "users" as const,
+    title: "Covered by Insurance",
+    description: "Most plans accepted",
+    icon: "shield" as const,
   },
 ] as const;
 
 export const WHAT_IS_TMS_FEATURES = [
   {
-    title: "Non-invasive — no surgery, no anesthesia",
-    description: "Patients sit comfortably in a reclining chair during treatment",
+    title: "Covered by most insurance plans",
+    description: "Many plans cover TMS when medication hasn't worked",
   },
   {
-    title: "Covered by most major insurance plans",
-    description: "Including Medicare, when antidepressants haven't worked",
+    title: "Non-invasive — no surgery, no anesthesia",
+    description: "Patients sit comfortably in a reclining chair during treatment",
   },
   {
     title: "Effective for treatment-resistant depression",
@@ -92,9 +92,9 @@ export const BENEFITS = [
     icon: "shield" as const,
   },
   {
-    title: "Live Your Life Normally",
+    title: "20-Min Sessions",
     description:
-      "20–40 min sessions, 5 days/week. Drive yourself, go to work, maintain your full daily routine.",
+      "20-minute sessions, 5 days/week. Drive yourself, go to work, and get back to your day.",
     icon: "clock" as const,
   },
 ] as const;
@@ -118,7 +118,7 @@ export const PROCESS_STEPS = [
     step: 3,
     title: "TMS Sessions",
     description:
-      "20–40 min in-office sessions, typically 5 days/week for 4–6 weeks. Relax in a comfortable chair.",
+      "20-min in-office sessions, typically 5 days/week for 4–6 weeks. Relax in a comfortable chair.",
     isFinal: false,
   },
   {
@@ -130,16 +130,20 @@ export const PROCESS_STEPS = [
   },
 ] as const;
 
+export const CONDITIONS_SECTION = {
+  label: "TMS for Depression",
+  title: "Feel Like Yourself Again",
+  subtitle:
+    "Rise TMS provides compassionate, evidence-based care for people struggling with depression when medication hasn't helped enough.",
+} as const;
+
 export const CONDITIONS = [
   "Depression",
-  "Anxiety",
-  "OCD",
-  "PTSD",
-  "Bipolar Disorder",
-  "ADD / ADHD",
-  "Grief",
-  "Psychotic Disorders",
-  "Trauma",
+  "Medication Not Working",
+  "Anxious Depression",
+  "Low Motivation",
+  "Loss of Interest",
+  "Side Effects",
 ] as const;
 
 export const ABOUT_CREDENTIALS = [
@@ -150,31 +154,31 @@ export const ABOUT_CREDENTIALS = [
 
 export const SPRAVATO_BADGES = [
   "FDA-Approved",
-  "Administered In-Office",
+  "Covered by Insurance",
   "Rapid Onset Relief",
 ] as const;
 
 export const TESTIMONIALS = [
   {
     quote:
-      "After years of trying different medications, TMS finally gave me my life back. I feel like myself again for the first time in years.",
-    name: "Sarah M.",
-    detail: "TMS Patient · Westlake Village",
+      "Dr. Parmar took the time to listen to my concerns, including my personal thoughts on meds and therapy, and built a tailored med and TMS therapy for me.",
+    name: "Steven B.",
+    detail: "TMS Patient",
     initial: "S",
   },
   {
     quote:
-      "Dr. Parmar and her team made me feel genuinely heard throughout the entire process. TMS worked when nothing else did.",
-    name: "James T.",
-    detail: "TMS Patient · Thousand Oaks",
+      "They offer great things here! I've already felt a lot of improvement, and I couldn't be happier!",
+    name: "Jaden R.",
+    detail: "TMS Patient",
     initial: "J",
   },
   {
     quote:
-      "I was skeptical at first, but within a few weeks I noticed real, lasting change. I'm so grateful I gave TMS a chance.",
-    name: "Maria L.",
-    detail: "TMS Patient · Calabasas",
-    initial: "M",
+      "The sweetest and most caring people. And the office is so peaceful! TMS treatments made a huge difference.",
+    name: "Bella L.",
+    detail: "TMS Patient",
+    initial: "B",
   },
 ] as const;
 
@@ -193,8 +197,8 @@ export const FOOTER_TREATMENTS = [
 
 export const FOOTER_CONDITIONS = [
   "Depression",
-  "Anxiety",
-  "PTSD",
-  "OCD",
-  "Bipolar Disorder",
+  "Medication Not Working",
+  "Anxious Depression",
+  "Low Motivation",
+  "Loss of Interest",
 ] as const;

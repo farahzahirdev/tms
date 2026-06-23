@@ -29,7 +29,7 @@ export default function Spravato() {
         </div>
 
         <div className={styles.ctaColumn}>
-          <Link href="#contact" className={styles.ctaCard}>
+          <Link href="#inquiry-form" className={styles.ctaCard}>
             <div className={styles.ctaTitle}>Ask About Spravato</div>
             <div className={styles.ctaSubtitle}>See if you&apos;re a candidate</div>
             <div className={styles.ctaButton}>Request Consultation →</div>

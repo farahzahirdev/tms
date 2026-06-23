@@ -12,9 +12,12 @@ export default function Hero() {
 
       <div className={styles.content}>
         <div className={styles.left}>
-          <div className={styles.badge}>
-            <span className={styles.badgeDot} />
-            Westlake Village, CA · Board-Certified Psychiatry
+          <div className={styles.badges}>
+            <div className={styles.badge}>
+              <span className={styles.badgeDot} />
+              Westlake Village, California
+            </div>
+            <div className={styles.badge}>Covered by Insurance</div>
           </div>
 
           <h1 className={styles.title}>
@@ -41,18 +44,18 @@ export default function Hero() {
           </div>
 
           <div className={styles.actions}>
-            <a href={SITE.phoneHref} className={styles.primaryAction}>
+            <Link href="#inquiry-form" className={styles.primaryAction}>
+              Check Eligibility
+              <ArrowRightIcon size={15} />
+            </Link>
+            <a href={SITE.phoneHref} className={styles.secondaryAction}>
               <PhoneIcon size={17} />
               Call {SITE.phone}
             </a>
-            <Link href="#contact" className={styles.secondaryAction}>
-              Request Free Consultation
-              <ArrowRightIcon size={15} />
-            </Link>
           </div>
         </div>
 
-        <div className={styles.formWrapper}>
+        <div id="inquiry-form" className={styles.formWrapper}>
           <div className={styles.formCard}>
             <HeroInquiryForm />
           </div>
