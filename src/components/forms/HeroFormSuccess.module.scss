@@ -37,7 +37,8 @@
 .title {
   font-family: $font-serif;
   font-size: clamp(28px, 3vw, 36px);
-  color: $color-text;
+  // color: $color-text;
+  color: #fff;
   margin: 0 0 16px;
   font-weight: 400;
   line-height: 1.15;
@@ -45,7 +46,8 @@
 
 .message {
   font-size: 16px;
-  color: $color-text-muted;
+  // color: $color-text-muted;
+  color: #fff;
   line-height: 1.72;
   margin: 0 0 12px;
   max-width: 320px;
@@ -53,7 +55,8 @@
 
 .submessage {
   font-size: 13px;
-  color: $color-text-light;
+  // color: $color-text-light;
+  color: #fff;
   line-height: 1.6;
   margin: 0 0 32px;
   max-width: 280px;
