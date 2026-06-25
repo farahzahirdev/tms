@@ -17,7 +17,7 @@ export default function Hero() {
               <span className={styles.badgeDot} />
               Westlake Village, California
             </div>
-            <div className={styles.badge}>Covered by Insurance</div>
+            {/* <div className={styles.badge}>Covered by Insurance</div> */}
           </div>
 
           <h1 className={styles.title}>

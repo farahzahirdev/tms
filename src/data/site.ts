@@ -1,7 +1,7 @@
 export const SITE = {
   name: "Rise TMS",
-  phone: "(805) 507-5155",
-  phoneHref: "tel:8055075155",
+  phone: "(805) 360-4085",
+  phoneHref: "tel:8053604085",
   email: "staff@risetms.com",
   address: {
     line1: "2629 Townsgate Rd, Suite 210",
@@ -31,7 +31,7 @@ export const HERO_BADGES = [
   "Covered by insurance",
   "FDA-cleared since 2008",
   "20-minute sessions",
-  "Resume daily activities immediately",
+  // "Resume daily activities immediately",
 ] as const;
 
 export const TRUST_ITEMS = [
