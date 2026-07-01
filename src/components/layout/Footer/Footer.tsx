@@ -45,8 +45,8 @@ export default function Footer() {
             <div className={styles.columnTitle}>Conditions</div>
             <div className={styles.linkList}>
               {FOOTER_CONDITIONS.map((item) => (
-                <Link key={item} href="#" className={styles.link}>
-                  {item}
+                <Link key={item.label} href={item.href} className={styles.link}>
+                  {item.label}
                 </Link>
               ))}
             </div>

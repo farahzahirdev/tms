@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   title: "Rise TMS | TMS Therapy in Westlake Village, CA",
   description:
     "Rise TMS offers FDA-cleared TMS therapy in Westlake Village, CA. Led by Dr. Priya Parmar, MD — board-certified psychiatry for treatment-resistant depression.",
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
 };
 
 export default function RootLayout({

@@ -5,7 +5,7 @@ import styles from "./Spravato.module.scss";
 
 export default function Spravato() {
   return (
-    <section className={styles.section}>
+    <section id="spravato" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.label}>Also Offering</div>

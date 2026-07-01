@@ -3,7 +3,7 @@ import styles from "./Conditions.module.scss";
 
 export default function Conditions() {
   return (
-    <section className={styles.section}>
+    <section id="conditions" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.label}>{CONDITIONS_SECTION.label}</div>
         <h2 className={styles.title}>{CONDITIONS_SECTION.title}</h2>

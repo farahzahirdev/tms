@@ -3,6 +3,7 @@
 
 .section {
   padding: 108px $section-padding-x;
+  scroll-margin-top: calc(#{$header-height} + 24px);
 }
 
 .container {

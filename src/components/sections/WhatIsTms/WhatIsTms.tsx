@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CheckIcon, ShieldCheckIcon } from "@/components/icons/Icons";
+import { CheckIcon } from "@/components/icons/Icons";
 import { WHAT_IS_TMS_FEATURES } from "@/data/site";
 import styles from "./WhatIsTms.module.scss";
 
@@ -45,15 +45,6 @@ export default function WhatIsTms() {
               height={550}
               className={styles.image}
             />
-          </div>
-          <div className={styles.floatingCard}>
-            <div className={styles.floatingIcon}>
-              <ShieldCheckIcon size={20} />
-            </div>
-            <div>
-              <div className={styles.floatingTitle}>FDA-Cleared</div>
-              <div className={styles.floatingSubtitle}>For depression since 2008</div>
-            </div>
           </div>
         </div>
       </div>

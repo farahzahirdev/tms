@@ -4,6 +4,7 @@
 .section {
   background: $color-bg-dark;
   padding: 72px $section-padding-x;
+  scroll-margin-top: calc(#{$header-height} + 24px);
 }
 
 .container {

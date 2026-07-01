@@ -7,10 +7,8 @@ export default function EmbeddedInquiryForm() {
   const iframeId = `inline-${INQUIRY_FORM.id}`;
 
 
-  console.log(INQUIRY_FORM.height, 'height');
-  
   return (
-    <div className={styles.wrappe}>
+    <div className={styles.wrapper}>
       <iframe
         src={INQUIRY_FORM.src}
         className={styles.iframe}

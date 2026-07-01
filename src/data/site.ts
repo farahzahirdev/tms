@@ -21,7 +21,6 @@ export const SITE = {
 } as const;
 
 export const INQUIRY_FORM_ID = "inquiry-form";
-export const CONTACT_FORM_ID = "contact-form";
 
 export const NAV_LINKS = [
   { href: "#what-is-tms", label: "What is TMS?" },
@@ -81,12 +80,6 @@ export const BENEFITS = [
     description:
       "TMS doesn't affect metabolism, appetite, or hormones — your weight stays exactly where it is.",
     icon: "heart" as const,
-  },
-  {
-    title: "No Emotional Blunting",
-    description:
-      "Feel joy, connection, and the full range of your emotions — without the numbness many antidepressants cause.",
-    icon: "smile" as const,
   },
   {
     title: "No Sexual Side Effects",
@@ -194,14 +187,13 @@ export const INTEREST_OPTIONS = [
 
 export const FOOTER_TREATMENTS = [
   { href: "#what-is-tms", label: "TMS Therapy" },
-  { href: "#", label: "Spravato® (Esketamine)" },
-  { href: "#", label: "Psychiatry Services" },
+  { href: "#spravato", label: "Spravato® (Esketamine)" },
 ] as const;
 
 export const FOOTER_CONDITIONS = [
-  "Depression",
-  "Medication Not Working",
-  "Anxious Depression",
-  "Low Motivation",
-  "Loss of Interest",
+  { href: "#conditions", label: "Depression" },
+  { href: "#conditions", label: "Medication Not Working" },
+  { href: "#conditions", label: "Anxious Depression" },
+  { href: "#conditions", label: "Low Motivation" },
+  { href: "#conditions", label: "Loss of Interest" },
 ] as const;
