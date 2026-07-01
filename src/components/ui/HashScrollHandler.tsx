@@ -1,15 +1,20 @@
 "use client";
 
 import { useEffect } from "react";
-import { INQUIRY_FORM_ID } from "@/data/site";
+import { CONTACT_FORM_ID, INQUIRY_FORM_ID } from "@/data/site";
+import { scrollToContactForm } from "@/lib/scrollToContactForm";
 import { scrollToInquiryForm } from "@/lib/scrollToInquiryForm";
 
 export default function HashScrollHandler() {
   useEffect(() => {
-    if (window.location.hash !== `#${INQUIRY_FORM_ID}`) return;
+    const hash = window.location.hash;
 
     const frame = window.requestAnimationFrame(() => {
-      scrollToInquiryForm();
+      if (hash === `#${INQUIRY_FORM_ID}`) {
+        scrollToInquiryForm();
+      } else if (hash === `#${CONTACT_FORM_ID}`) {
+        scrollToContactForm();
+      }
     });
 
     return () => window.cancelAnimationFrame(frame);

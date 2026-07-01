@@ -1,4 +1,4 @@
-import InquiryFormLink from "@/components/ui/InquiryFormLink";
+import ContactFormLink from "@/components/ui/ContactFormLink";
 import { ArrowRightIcon, CircleCheckIcon } from "@/components/icons/Icons";
 import { PROCESS_STEPS } from "@/data/site";
 import styles from "./HowItWorks.module.scss";
@@ -26,10 +26,10 @@ export default function HowItWorks() {
         </div>
 
         <div className={styles.cta}>
-          <InquiryFormLink className={styles.ctaButton}>
+          <ContactFormLink className={styles.ctaButton}>
             Start Your Journey Today
             <ArrowRightIcon size={16} />
-          </InquiryFormLink>
+          </ContactFormLink>
         </div>
       </div>
     </section>

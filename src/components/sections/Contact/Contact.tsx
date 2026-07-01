@@ -1,7 +1,6 @@
 import EmbeddedInquiryForm from "@/components/forms/EmbeddedInquiryForm";
-import { INQUIRY_FORM_ID } from "@/data/site";
 import { MailIcon, MapPinIcon, PhoneIcon } from "@/components/icons/Icons";
-import { SITE } from "@/data/site";
+import { CONTACT_FORM_ID, SITE } from "@/data/site";
 import styles from "./Contact.module.scss";
 
 export default function Contact() {
@@ -59,7 +58,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div id={INQUIRY_FORM_ID} className={styles.formColumn}>
+        <div id={CONTACT_FORM_ID} className={styles.formColumn}>
           <div className={styles.formCard}>
             <EmbeddedInquiryForm />
           </div>

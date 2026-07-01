@@ -36,7 +36,7 @@
   padding: 80px $section-padding-x;
   display: flex;
   gap: 72px;
-  align-items: flex-start;
+  align-items: stretch;
 
   @include respond-to(desktop) {
     flex-direction: column;
@@ -182,6 +182,7 @@
   max-width: 600px;
   min-width: 400px;
   display: flex;
+  scroll-margin-top: calc(#{$header-height} + 24px);
   @include fade-up(0.16s);
 
   @include respond-to(desktop) {
