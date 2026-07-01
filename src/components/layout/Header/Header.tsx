@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import InquiryFormLink from "@/components/ui/InquiryFormLink";
+import ContactFormLink from "@/components/ui/ContactFormLink";
 import { NAV_LINKS, SITE } from "@/data/site";
 import styles from "./Header.module.scss";
 
@@ -27,9 +27,9 @@ export default function Header() {
           ))}
         </nav>
 
-        <InquiryFormLink className={styles.ctaButton}>
+        <ContactFormLink className={styles.ctaButton}>
           Start Here
-        </InquiryFormLink>
+        </ContactFormLink>
       </div>
     </header>
   );
