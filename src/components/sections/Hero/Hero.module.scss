@@ -36,7 +36,7 @@
   padding: 80px $section-padding-x;
   display: flex;
   gap: 72px;
-  align-items: stretch;
+  align-items: flex-start;
 
   @include respond-to(desktop) {
     flex-direction: column;

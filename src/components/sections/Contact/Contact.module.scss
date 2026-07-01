@@ -115,6 +115,7 @@
 .formColumn {
   flex: 0 0 480px;
   min-width: 0;
+  scroll-margin-top: calc(#{$header-height} + 24px);
 
   @include respond-to(desktop) {
     flex: 1;

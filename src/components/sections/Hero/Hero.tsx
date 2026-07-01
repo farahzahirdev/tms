@@ -1,5 +1,4 @@
-import Link from "next/link";
-import HeroInquiryForm from "@/components/forms/HeroInquiryForm";
+import InquiryFormLink from "@/components/ui/InquiryFormLink";
 import { ArrowRightIcon, CheckIcon, PhoneIcon } from "@/components/icons/Icons";
 import { HERO_BADGES, SITE } from "@/data/site";
 import styles from "./Hero.module.scss";
@@ -44,20 +43,14 @@ export default function Hero() {
           </div>
 
           <div className={styles.actions}>
-            <Link href="#inquiry-form" className={styles.primaryAction}>
+            <InquiryFormLink className={styles.primaryAction}>
               Check Eligibility
               <ArrowRightIcon size={15} />
-            </Link>
+            </InquiryFormLink>
             <a href={SITE.phoneHref} className={styles.secondaryAction}>
               <PhoneIcon size={17} />
               Call {SITE.phone}
             </a>
-          </div>
-        </div>
-
-        <div id="inquiry-form" className={styles.formWrapper}>
-          <div className={styles.formCard}>
-            <HeroInquiryForm />
           </div>
         </div>
       </div>

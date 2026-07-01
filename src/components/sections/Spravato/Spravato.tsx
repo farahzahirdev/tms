@@ -1,4 +1,4 @@
-import Link from "next/link";
+import InquiryFormLink from "@/components/ui/InquiryFormLink";
 import { CheckIcon } from "@/components/icons/Icons";
 import { SPRAVATO_BADGES } from "@/data/site";
 import styles from "./Spravato.module.scss";
@@ -29,11 +29,11 @@ export default function Spravato() {
         </div>
 
         <div className={styles.ctaColumn}>
-          <Link href="#inquiry-form" className={styles.ctaCard}>
+          <InquiryFormLink className={styles.ctaCard}>
             <div className={styles.ctaTitle}>Ask About Spravato</div>
             <div className={styles.ctaSubtitle}>See if you&apos;re a candidate</div>
             <div className={styles.ctaButton}>Request Consultation →</div>
-          </Link>
+          </InquiryFormLink>
         </div>
       </div>
     </section>

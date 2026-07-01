@@ -20,6 +20,8 @@ export const SITE = {
   },
 } as const;
 
+export const INQUIRY_FORM_ID = "inquiry-form";
+
 export const NAV_LINKS = [
   { href: "#what-is-tms", label: "What is TMS?" },
   { href: "#benefits", label: "Why TMS" },

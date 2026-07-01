@@ -1,4 +1,5 @@
 import FormEmbedScript from "@/components/forms/FormEmbedScript";
+import HashScrollHandler from "@/components/ui/HashScrollHandler";
 import About from "@/components/sections/About/About";
 import Benefits from "@/components/sections/Benefits/Benefits";
 import Conditions from "@/components/sections/Conditions/Conditions";
@@ -14,6 +15,7 @@ export default function HomePage() {
   return (
     <>
       <FormEmbedScript />
+      <HashScrollHandler />
       <Hero />
       <TrustBar />
       <WhatIsTms />
